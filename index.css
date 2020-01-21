@@ -1,0 +1,21 @@
+.table-sm {
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 5%;
+}
+
+#input, #answer {
+    text-align: right;
+    border: none;
+    
+}
+
+.btn {
+    width: 50px;
+    border-radius: 7%;
+}
+
+.btn-success {
+    width: 100px;
+}
