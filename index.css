@@ -3,8 +3,8 @@
    text-align: center;
 }
 
-#input, #answer {
-    border: none;   
+#myInput, #answer {
+    border: none;  
 }
 
 .btn {
