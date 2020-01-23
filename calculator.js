@@ -78,6 +78,6 @@ function clearAll() {
 
 function compute() {
     var input = document.getElementById('myInput');
-    answer = Math.floor(+eval(input.value));
+    answer = eval(input.value);
     document.getElementById('answer').value = answer;
 }
