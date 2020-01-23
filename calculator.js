@@ -58,6 +58,9 @@ function getOperands(operator) {
         case '+/-':
             input.value = -Math.abs(input.value);
             break;
+        case '.':
+            input.value += '.';
+            break;
     }
 }
 
@@ -80,4 +83,15 @@ function compute() {
     var input = document.getElementById('myInput');
     answer = eval(input.value);
     document.getElementById('answer').value = answer;
+}
+let maka = 1;
+function getBracket() {
+    let input = document.getElementById('myInput')
+     if (maka == 1) {
+        maka++;
+        input.value += '(';
+    } else {
+        input.value += ')';
+        maka--;
+    }
 }
