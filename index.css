@@ -1,16 +1,20 @@
+body {
+    color: red;
+}
 .table-sm {
    border-radius: 5%;
    text-align: center;
 }
 
 #myInput, #answer {
-    border: none;  
+    border: none;
+    background-color: gainsboro;  
 }
 
 .btn {
-    width: 50px;
+    width: 60px;
 }
 
 .btn-success {
-    width: 100px;
+    width: 120px;
 }

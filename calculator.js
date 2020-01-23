@@ -61,7 +61,23 @@ function getOperands(operator) {
     }
 }
 
-function backspace() {
+function del() {
     var input = document.getElementById('myInput');
-    input.value = Math.floor(input.value / 10);
+    var del = input.value;
+    if(del.length > 0) {
+        del =  del.substring(0, del.length -1);
+        input.value = del;
+    }
+}
+
+function clearAll() {
+    var input = document.getElementById('myInput');
+    document.getElementById('myInput').value = '';
+    document.getElementById('answer').value = '';
+}
+
+function compute() {
+    var input = document.getElementById('myInput');
+    answer = Math.floor(+eval(input.value));
+    document.getElementById('answer').value = answer;
 }
