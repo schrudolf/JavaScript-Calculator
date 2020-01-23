@@ -2,4 +2,4 @@ JS Calculator + Bootstrap
 
 Preview:
 
-https://schrudolf.github.io/JS-calculator/
+https://schrudolf.github.io/JavaScript-Calculator/
