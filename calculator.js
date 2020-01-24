@@ -1,5 +1,5 @@
 function getNumbers(number) {
-    var input = document.getElementById('myInput');
+    let input = document.getElementById('myInput');
     switch(number) {
         case 0:
             input.value += '0';
@@ -38,7 +38,7 @@ function getNumbers(number) {
 }
 
 function getOperands(operator) {
-    var input = document.getElementById('myInput');
+    let input = document.getElementById('myInput');
     switch(operator) {
         case '-':
             input.value += '-';
@@ -65,8 +65,8 @@ function getOperands(operator) {
 }
 
 function del() {
-    var input = document.getElementById('myInput');
-    var del = input.value;
+    let input = document.getElementById('myInput');
+    let del = input.value;
     if(del.length > 0) {
         del =  del.substring(0, del.length -1);
         input.value = del;
@@ -74,24 +74,35 @@ function del() {
 }
 
 function clearAll() {
-    var input = document.getElementById('myInput');
+    let input = document.getElementById('myInput');
     document.getElementById('myInput').value = '';
     document.getElementById('answer').value = '';
 }
 
+let rowid = 1;
 function compute() {
-    var input = document.getElementById('myInput');
+    let newrow = document.getElementById('newrow');
+    let input = document.getElementById('myInput');
     answer = eval(input.value);
     document.getElementById('answer').value = answer;
+    let row = newrow.insertRow(0);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+    cell1.innerHTML = rowid;
+    cell2.innerHTML = input.value;
+    cell3.innerHTML = answer;
+    document.getElementById('myInput').value = '';
+    rowid++;
 }
-let maka = 1;
+let bracket = 1;
 function getBracket() {
     let input = document.getElementById('myInput')
-     if (maka == 1) {
-        maka++;
+     if (bracket == 1) {
+        bracket++;
         input.value += '(';
     } else {
         input.value += ')';
-        maka--;
+        bracket--;
     }
 }
