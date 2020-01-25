@@ -1,4 +1,5 @@
 function getNumbers(number) {
+    let answer = document.getElementById('answer');
     let input = document.getElementById('myInput');
     switch(number) {
         case 0:
@@ -33,6 +34,9 @@ function getNumbers(number) {
             break;
         case '+/-':
             input.value += -Math.abs(number);
+            break;
+        case 'forge':
+            answer.value = input.value * 1.9;
             break;
     }
 }
@@ -83,17 +87,23 @@ let rowid = 1;
 function compute() {
     let newrow = document.getElementById('newrow');
     let input = document.getElementById('myInput');
-    answer = eval(input.value);
-    document.getElementById('answer').value = answer;
-    let row = newrow.insertRow(0);
-    let cell1 = row.insertCell(0);
-    let cell2 = row.insertCell(1);
-    let cell3 = row.insertCell(2);
-    cell1.innerHTML = rowid;
-    cell2.innerHTML = input.value;
-    cell3.innerHTML = answer;
-    document.getElementById('myInput').value = '';
-    rowid++;
+    if (input.value.length > 20) {
+        document.getElementById('answer').value = ' Maximum character length 20! ';
+    } else if (input.value.length < 3) {
+        document.getElementById('answer').value = ' Minimum 3 character required! ';
+    }  else {
+        let answer = eval(input.value);
+        document.getElementById('answer').value = answer;
+        let row = newrow.insertRow(0);
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        cell1.innerHTML = rowid;
+        cell2.innerHTML = input.value;
+        cell3.innerHTML = answer;
+        document.getElementById('myInput').value = '';
+        rowid++; 
+    }
 }
 let bracket = 1;
 function getBracket() {
