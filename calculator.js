@@ -1,4 +1,5 @@
 function getNumbers(number) {
+    let newrow = document.getElementById('newrow');
     let answer = document.getElementById('answer');
     let input = document.getElementById('myInput');
     switch(number) {
@@ -37,6 +38,15 @@ function getNumbers(number) {
             break;
         case 'forge':
             answer.value = input.value * 1.9;
+            let row = newrow.insertRow(0);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            cell1.innerHTML = rowid;
+            cell2.innerHTML = input.value + " * 1.9 ";
+            cell3.innerHTML = answer.value;
+            document.getElementById('myInput').value = '';
+            rowid++;
             break;
     }
 }

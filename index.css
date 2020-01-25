@@ -9,7 +9,8 @@
 
 #myInput, #answer {
     border: none;
-    background-color: gainsboro;  
+    background-color: gainsboro;
+    font-size: large; 
 }
 
 .btn {
