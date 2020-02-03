@@ -6,11 +6,11 @@
    text-align: center;
    min-width: 300px;
 }
-
-#myInput, #answer {
+   #myInput, #answer {
+    padding: 1rem;   
     border: none;
     background-color: gainsboro;
-    font-size: large; 
+    font-size: larger;
 }
 
 .btn {
